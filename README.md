@@ -1,46 +1,79 @@
-# Getting Started with Create React App
+# NPM Lens
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+NPM Lens is a web application built with React, Redux, and TypeScript that allows you to search for NPM packages and list the matching ones. This README provides an overview of the project, installation instructions, and usage guidelines.
 
-## Available Scripts
+![npm lens - loading state](https://i.imgur.com/RCLFlqp.png)
 
-In the project directory, you can run:
+## Table of Contents
+- [NPM Lens](#npm-lens)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Project Structure](#project-structure)
+  - [Screenshots](#screenshots)
+    - [npm lens - main](#npm-lens---main)
+    - [npm lens - loading state](#npm-lens---loading-state)
+    - [npm lens - response data](#npm-lens---response-data)
 
-### `npm start`
+## Features
+- Search for NPM packages by name.
+- Display a list of matching packages.
+- Handle loading and error states gracefully.
+- Built with React, Redux, and TypeScript for a robust and type-safe codebase.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
+To run NPM Lens locally on your machine, follow these steps:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Clone the repository:
 
-### `npm test`
+   ```bash
+   git clone https://github.com/colson0x1/npm-lens.git
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Change your working directory to the project folder:
 
-### `npm run build`
+   ```bash
+   cd npm-lens
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Install the project dependencies using npm:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
+Once you have installed the project, you can run it locally:
 
-### `npm run eject`
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This command will start the development server, and you can access the application in your web browser at `http://localhost:3000`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To search for NPM packages:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Enter a package name in the input field.
+2. Click the "Search" button.
+3. View the list of matching packages.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Project Structure
+The project is organized into several directories and files:
 
-## Learn More
+- `src/components`: Contains React components, including the main `App` component and `RepositoriesList` component.
+- `src/hooks`: Custom React hooks used in the application, such as `useActions` and `useTypedSelector`.
+- `src/state`: Redux-related files, including action creators, action types, reducers, and the Redux store configuration.
+- `src/index.ts`: The entry point of the application where React is initialized.
+- `package.json`: Contains project metadata and dependencies.
+- `README.md`: The README you are currently reading.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Screenshots
+### npm lens - main
+![npm lens - main](https://i.imgur.com/xzIg85E.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### npm lens - loading state
+![npm lens - loading state](https://i.imgur.com/RCLFlqp.png)
+
+### npm lens - response data
+![npm lens - response data](https://i.imgur.com/enq7lVr.png)
